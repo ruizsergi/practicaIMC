@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IMC</string>
+    <string name="result">ERGEBNIS:</string>
+    <string name="height">Geben Sie Höhe (cm)</string>
+    <string name="weight">Geben Sie Ihr Gewicht (kg)</string>
+    <string name="calculate">Berechnen</string>
+    <string name="normal">18,5 - 25 NORMAL</string>
+    <string name="overweight">25 - 31 ÜBERGEWICHT</string>
+    <string name="slim">16 - 18,5 DüNN</string>
+    <string name="skinny">16 unterernährt</string>
+    <string name="obese">31 fettleibig</string>
+</resources>

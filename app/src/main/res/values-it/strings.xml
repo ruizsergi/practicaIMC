@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IMC</string>
+    <string name="calculate">Calcolo</string>
+    <string name="height">Entrare in altezza (cm)</string>
+    <string name="weight">Entrare peso (kg)</string>
+    <string name="result">RISULTATO:</string>
+    <string name="normal">" 18,5 -25 NORMALE"</string>
+    <string name="overweight">25 -31 SOVRAPPESO</string>
+    <string name="slim">16 - 18,5 SOTTILE</string>
+    <string name="skinny">16 denutrito</string>
+    <string name="obese">31 OBESO</string>
+</resources>

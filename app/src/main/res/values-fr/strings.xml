@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IMC</string>
+    <string name="weight">Entrer le poids (cm)</string>
+    <string name="height">Entrez la hauteur (kg)</string>
+    <string name="result">RESULTAT:</string>
+    <string name="calculate">Calcul</string>
+    <string name="normal">" 18,5 -25 NORMAL"</string>
+    <string name="overweight">25 -31 SURPOIDS</string>
+    <string name="slim">16 - 18,5 MINCE</string>
+    <string name="skinny">16 SOUS-ALIMENTé</string>
+    <string name="obese">31 obèse</string>
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name" translatable="false">IMC</string>
+    <string name="height">Introduzca altura(cm)</string>
+    <string name="weight">Introduzca peso(kg)</string>
+    <string name="calculate">Calcular</string>
+    <string name="result">RESULTADO: </string>
+    <string name="skinny">16 DESNUTRIDO</string>
+    <string name="slim">entre 16 y 18,5 BAJO PESO</string>
+    <string name="normal">entre 18,5 y 25 NORMAL</string>
+    <string name="overweight">entre 25 y 31 SOBREPESO</string>
+    <string name="obese">mayor que 31 OBESIDAD</string>
+</resources>
