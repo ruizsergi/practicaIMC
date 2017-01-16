@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">IMC</string>
+    <string name="app_name">IMC</string>
     <string name="height">Introduzca altura(cm)</string>
     <string name="weight">Introduzca peso(kg)</string>
     <string name="calculate">Calcular</string>

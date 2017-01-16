@@ -19,7 +19,7 @@
         android:layout_marginStart="13dp"
         android:layout_marginTop="22dp"
         android:textSize="25sp"
-        android:id="@+id/textResult1"
+        android:id="@+id/textResultado"
         android:fontFamily="casual"
         android:textColor="@color/colorAccent"
         android:textStyle="normal|bold"
@@ -33,25 +33,26 @@
         android:layout_marginTop="20dp"
         android:textSize="25sp"
         android:id="@+id/textResult2"
-        android:layout_below="@+id/textResult1"
-        android:layout_alignStart="@+id/textResult1" />
+        android:layout_below="@+id/textResultado"
+        android:layout_alignStart="@+id/textResultado"/>
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:srcCompat="@mipmap/ic_listview"
-        android:id="@+id/imageButton4"
-        android:layout_below="@+id/textResult2"
-        android:layout_alignStart="@+id/textResult2" />
+
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:id="@+id/listaPesos"
-        android:layout_below="@+id/imageButton4"
+        android:layout_below="@+id/botonMostrar"
         android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Mostrar indices"
+        android:layout_below="@id/textResult2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/botonMostrar" />
 
 
 </RelativeLayout>

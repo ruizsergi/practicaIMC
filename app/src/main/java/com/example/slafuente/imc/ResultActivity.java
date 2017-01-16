@@ -6,14 +6,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class ResultActivity extends AppCompatActivity {
 
+    private TextView textView = null;
+
+
     //Array que asociaremos al adaptador
+    ArrayList<String> alist = new ArrayList<String>();
     String[] array = new String[] {
             "< 16 DESNUTRIDO",
             " => 16 < 18,5 BAJO PESO",
@@ -21,18 +28,25 @@ public class ResultActivity extends AppCompatActivity {
             ">=25 < 31 SOBREPESO",
             ">= 31 OBESIDAD"
     };
-    ListAdapter adaptador = null;
+    //ListAdapter adaptador = null;*/
+    AdapterPropio ap = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        //Creación del adaptador, vamos a escoger el layout
-        //simple_list_item_1, que los mostr
-        adaptador = new ArrayAdapter<String>(this, R.layout.fila, array);
+        for (int i = 0; i< array.length; i++) {
+            alist.add(i,array[i]);
+        }
 
-        ImageButton imageButton = (ImageButton)findViewById(R.id.imageButton4) ;
+        //Creación del adaptador, vamos a escoger el layout
+        //adaptador = new ArrayAdapter<String>(this, R.layout.fila, array);
+        textView = (TextView)findViewById(R.id.textviewFila) ;
+
+        ap = new AdapterPropio(this, alist);
+
+        Button button = (Button)findViewById(R.id.botonMostrar);
 
         TextView resultView = (TextView)findViewById(R.id.textResult2);
 
@@ -41,12 +55,12 @@ public class ResultActivity extends AppCompatActivity {
 
         resultView.setText(result);
 
-        imageButton.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Asociamos el adaptador a la vista.
                 ListView lv = (ListView) findViewById(R.id.listaPesos);
-                lv.setAdapter(adaptador);
+                lv.setAdapter(ap);
             }
         });
 
