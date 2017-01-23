@@ -35,11 +35,11 @@ public class MiLoginActivity extends AppCompatActivity {
         //Recuperamos de sharedPreferences el nombre del usuario
         String nombreUsuario = sharedPreferences.getString(NAME_MEMBER, "");
         Log.d(getClass().getCanonicalName(), "valor de SP- name " + nombreUsuario);
-//        if (!"".equals(nombreUsuario)) {
-//            //si se ha logueado antes va directo a IMC
-//            goToIMC = new Intent(this, MainActivity.class);
-//            startActivity(goToIMC);
-//        }
+        //si el usuario ya ha entrado antes, va directo a IMC
+        if (!"".equals(nombreUsuario)) {
+            goToIMC = new Intent(this, MainActivity.class);
+            startActivity(goToIMC);
+        }
 
         buttonSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +51,8 @@ public class MiLoginActivity extends AppCompatActivity {
                 if (Business.checkDetails(name, password)) {
                     addNombreToSharedPreferences(name);
                     accesoBBDD(name, password);
+                } else {textEmail.setError(getString(R.string.error_field_required));
+
                 }
             }
         });

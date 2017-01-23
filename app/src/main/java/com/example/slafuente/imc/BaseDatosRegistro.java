@@ -84,8 +84,6 @@ public class BaseDatosRegistro extends SQLiteOpenHelper{
             Log.d(getClass().getCanonicalName(), "email es "  + cursor.getString(0));
             Log.d(getClass().getCanonicalName(), "password es " + cursor.getString(1));
             usuario = new Usuario(cursor.getString(0), cursor.getString(1));
-//            usuario.setEmail(cursor.getString(0));
-//            usuario.setPassword(cursor.getString(1));
         }
         //Cerramos cursor y bbdd
         cursor.close();
@@ -93,6 +91,11 @@ public class BaseDatosRegistro extends SQLiteOpenHelper{
         return usuario;
     }
 
+    /**
+     * Comprobamos que exista el usuario en bbdd mirando si existe el email
+     * @param email
+     * @return boolean con usuario esta o no en bbdd
+     */
     public boolean existeUsuario(String email) {
         boolean existe = false;
         SQLiteDatabase db = this.getReadableDatabase();
@@ -106,6 +109,5 @@ public class BaseDatosRegistro extends SQLiteOpenHelper{
         cursor.close();
         cerrarBaseDatos(db);
         return existe;
-
     }
 }
