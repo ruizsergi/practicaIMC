@@ -9,4 +9,18 @@
     <string name="normal">entre 18,5 y 25 NORMAL</string>
     <string name="overweight">entre 25 y 31 SOBREPESO</string>
     <string name="obese">mayor que 31 OBESIDAD</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
 </resources>

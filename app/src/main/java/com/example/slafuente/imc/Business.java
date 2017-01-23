@@ -1,5 +1,6 @@
 package com.example.slafuente.imc;
 
+import android.content.Context;
 import android.util.Log;
 
 /**
@@ -30,4 +31,49 @@ public class Business {
         }
         return outputText;
     }
+
+    public static boolean checkDetails(String name, String password) {
+
+        /**
+         * Bandera evidenciar algun error durante la validación de los datos
+         * Variable para contener el campo a ser enfocado
+         */
+        boolean cancel = false;
+        //View focusView = null;
+
+        /**Comprobar si el password ingresado no es nulo y es valido*/
+        if (password.equals(null) || "".equals(password)) {
+            /**Envia el error a la caja de Texto*/
+//            mPasswordView.setError(getString(R.string.error_invalid_password));
+//            focusView = mPasswordView;
+            cancel = true;
+            return false;
+        }
+
+        /**Comprobar si el campo para el Email esta vacio. */
+        if (name.equals(null) || "".equals(name)) {
+            /**Envia el error a la caja de Texto*/
+//            mEmailView.setError(getString(R.string.error_field_required));
+//            focusView = mEmailView;
+            cancel = true;
+            return false;
+        }
+
+        /**Comprobar si hubo un fallo durante el ingreso de datos*/
+        if (cancel) {
+            /**Enfocar el Campo del Error*/
+            //focusView.requestFocus();
+            return false;
+        } else {
+            /**Cargar Animación con una barra de progreso*/
+            //showProgress(true);
+            /**Crea un nuevo Usuario a partir de la clase  mAuthTask*/
+            Usuario user = new Usuario(name, password);
+            /**Lanzar el Hilo para la Autenticación del Usuario*/
+            //mAuthTask.execute((Void) null);
+            return true;
+        }
+    }
+
+
 }
