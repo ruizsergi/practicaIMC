@@ -1,0 +1,12 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/idFoto"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="Foto"
+        android:orderInCategory="1"/>
+    <item android:id="@+id/idEstado"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Estado"
+        android:orderInCategory="2"/>
+</menu>
