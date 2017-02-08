@@ -1,4 +1,4 @@
-package com.example.slafuente.imc;
+package com.example.slafuente.imc.modelo;
 
 import android.content.Context;
 import android.database.Cursor;

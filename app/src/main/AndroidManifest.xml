@@ -19,19 +19,20 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".ResultActivity" />
-        <activity android:name=".MiLoginActivity">
+        <activity android:name=".vista.MainActivity" />
+        <activity android:name=".vista.ResultActivity" />
+        <activity android:name=".vista.MiLoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HacerFoto" />
-        <activity android:name=".MiEstado" />
-        <activity android:name=".PantallaFoto" />
-        <activity android:name=".CambiarEstado"></activity>
+        <activity android:name=".vista.HacerFoto" />
+        <activity android:name=".vista.MiEstado" />
+        <activity android:name=".vista.PantallaFoto" />
+        <activity android:name=".vista.CambiarEstado" />
+        <activity android:name=".vista.SeleccionarFotoActivity"></activity>
     </application>
 
 </manifest>

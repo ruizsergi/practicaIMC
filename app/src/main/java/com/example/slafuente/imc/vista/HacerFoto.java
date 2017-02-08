@@ -1,4 +1,4 @@
-package com.example.slafuente.imc;
+package com.example.slafuente.imc.vista;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -13,14 +13,15 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.example.slafuente.imc.R;
+import com.example.slafuente.imc.vista.PantallaFoto;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.jar.Manifest;
 
 public class HacerFoto extends AppCompatActivity {
 
@@ -120,7 +121,7 @@ public class HacerFoto extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_hacer_foto);
 
         if ((tienePermisos (android.Manifest.permission.CAMERA))&&
                 (tienePermisos (android.Manifest.permission.WRITE_EXTERNAL_STORAGE))) {
@@ -184,12 +185,12 @@ public class HacerFoto extends AppCompatActivity {
 
                 Log.d(getClass().getCanonicalName(), "La cosa fue bien Código " + resultCode);
                 Bitmap bitmap = null; //la foto que se mostrará en la actividad
-
+                File imgFile = null;
                 if (data == null) {
                     //el fichero ha sido guarado en una ruta => se ha usado el putExtra MediaStore.EXTRA_OUTPUT
                     Log.d(getClass().getCanonicalName(), "Se empleó el parámetro MediaStore.EXTRA_OUTPUT");
                     try {
-                        File imgFile = new  File(ruta_captura_foto);
+                        imgFile = new  File(ruta_captura_foto);
                         bitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
                     } catch (Exception e) {
                         Log.e(getClass().getCanonicalName(), "ERRORAZO recuperando la foto tomada" , e);
@@ -202,8 +203,22 @@ public class HacerFoto extends AppCompatActivity {
                     bitmap = (Bitmap) data.getExtras().get("data");
                 }
 
-                ImageView imageView = (ImageView) findViewById(R.id.captureimg);
-                imageView.setImageBitmap(bitmap);
+//                ImageView imageView = (ImageView) findViewById(R.id.captureimg);
+//                imageView.setImageBitmap(bitmap);
+
+                Intent aPantallaFoto = new Intent(getApplicationContext(), PantallaFoto.class);
+                Log.d(getClass().getCanonicalName(), "1111111111");
+
+                aPantallaFoto.putExtra("imageUri", "file://" + imgFile.getAbsolutePath());
+                Log.d(getClass().getCanonicalName(), "2222222222 " + imgFile.getAbsolutePath());
+                try {
+                    Log.d(getClass().getCanonicalName(), "555555555 " + imgFile.getCanonicalPath());
+                } catch (IOException e) {
+                    Log.d(getClass().getCanonicalName(),"33333333 ");
+                }
+
+                Log.d(getClass().getCanonicalName(), "4444444444 " + imgFile.getPath());
+                startActivity(aPantallaFoto);
 
                 break;
 

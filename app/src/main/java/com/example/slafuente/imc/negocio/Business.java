@@ -1,7 +1,6 @@
-package com.example.slafuente.imc;
+package com.example.slafuente.imc.negocio;
 
-import android.content.Context;
-import android.util.Log;
+import com.example.slafuente.imc.modelo.Usuario;
 
 /**
  * Created by slafuente on 02/01/2017.

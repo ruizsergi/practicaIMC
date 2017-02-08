@@ -1,14 +1,16 @@
-package com.example.slafuente.imc;
+package com.example.slafuente.imc.vista;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.slafuente.imc.negocio.Business;
+import com.example.slafuente.imc.R;
 
 public class MainActivity extends AppCompatActivity {
 

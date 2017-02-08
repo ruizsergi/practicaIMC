@@ -1,4 +1,4 @@
-package com.example.slafuente.imc;
+package com.example.slafuente.imc.modelo;
 
 /**
  * Created by slafuente on 22/01/2017.

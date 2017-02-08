@@ -1,10 +1,13 @@
-package com.example.slafuente.imc;
+package com.example.slafuente.imc.negocio;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.widget.EditText;
+
+import com.example.slafuente.imc.R;
+import com.example.slafuente.imc.vista.MiEstado;
 
 
 /**

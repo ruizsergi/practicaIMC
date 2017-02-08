@@ -1,4 +1,4 @@
-package com.example.slafuente.imc;
+package com.example.slafuente.imc.vista;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +12,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.slafuente.imc.modelo.BaseDatosRegistro;
+import com.example.slafuente.imc.negocio.Business;
+import com.example.slafuente.imc.R;
+import com.example.slafuente.imc.modelo.Usuario;
 
 public class MiLoginActivity extends AppCompatActivity {
 

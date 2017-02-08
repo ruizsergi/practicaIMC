@@ -1,0 +1,10 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/idmakefoto"
+        android:title="Hacer foto"
+        android:orderInCategory="1"/>
+    <item android:id="@+id/choosefoto"
+           android:title="Elegir foto"
+        android:orderInCategory="2"/>
+
+</menu>
